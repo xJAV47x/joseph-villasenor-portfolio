@@ -4,64 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSWC Corona Case Study | Joseph Villasenor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
-        header { background-color: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
-        .back-link { color: white; text-decoration: none; font-weight: bold; }
-        section { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        h1, h2 { color: #2c3e50; }
-        h2 { border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .impact-box { background-color: #e8f4fd; border-left: 5px solid #3498db; padding: 20px; margin: 20px 0; font-weight: bold; font-size: 1.1em; }
-        .tech-tag { display: inline-block; background: #34495e; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.9em; margin: 5px; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .gallery-item { border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; color: #7f8c8d; font-style: italic; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .card { background-color: #161616; border: 1px solid #27272a; }
+        .tech-tag { background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); color: #60a5fa; }
+        .impact-box { border-left: 4px solid #2563eb; background: rgba(37, 99, 235, 0.05); }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Case Study: NSWC Corona</h1>
-        <a href="../index.html" class="back-link">&larr; Back to Home</a>
-    </header>
-
-    <section>
-        <h2>The Challenge</h2>
-        <p>Identified systemic data integrity failures due to the use of hundreds of disparate SharePoint lists as databases for tracking critical project metrics. This resulted in massive data duplication, lack of visibility for leadership, and significant operational overhead across the command.</p>
-    </section>
-
-    <section>
-        <h2>My Architectural Solution</h2>
-        <p>Formulated and successfully advocated for a strategic shift from SharePoint to <strong>Microsoft Dataverse</strong>. This involved presenting the technical and business case to senior leadership (PEO Digital) to procure and sanction a dedicated Dataverse environment.</p>
-        <ul>
-            <li><strong>Data Modeling:</strong> Designed a fully normalized data model in Dataverse, creating relational tables and establishing authoritative data relationships.</li>
-            <li><strong>Application Design:</strong> Architected and built a Model-Driven Power App as the primary user interface, providing a unified platform for data entry and reporting.</li>
-            <li><strong>Security & Governance:</strong> Implemented a granular security model using Dataverse's role-based and row-level security to ensure least-privilege access to sensitive project data.</li>
-        </ul>
-        <div>
-            <span class="tech-tag">Microsoft Dataverse</span>
-            <span class="tech-tag">Power Apps</span>
-            <span class="tech-tag">Power BI</span>
-            <span class="tech-tag">DoD IL5 (FlankSpeed)</span>
+<body class="antialiased">
+    <nav class="fixed w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm font-medium text-zinc-400 hover:text-white transition">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Portfolio
+            </a>
+            <div class="text-xl font-bold tracking-tighter">JV</div>
         </div>
-    </section>
+    </nav>
 
-    <section>
-        <h2>The Outcome</h2>
-        <div class="impact-box">
-            The resulting solution consolidated hundreds of workflows, eliminated data duplication, and reduced departmental overhead related to data management by an estimated 80%.
+    <main class="pt-32 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <header class="mb-16">
+                <span class="text-blue-500 font-bold text-sm uppercase tracking-widest">Case Study: NSWC Corona (NAVSEA)</span>
+                <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-8">Enterprise Data Platform & Governance</h1>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tech-tag px-4 py-2 rounded-lg text-sm">Microsoft Dataverse</span>
+                    <span class="tech-tag px-4 py-2 rounded-lg text-sm">Power Apps</span>
+                    <span class="tech-tag px-4 py-2 rounded-lg text-sm">DoD IL5 (FlankSpeed)</span>
+                    <span class="tech-tag px-4 py-2 rounded-lg text-sm">RBAC/PIM</span>
+                </div>
+            </header>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6 text-zinc-200">The Challenge</h2>
+                <p class="text-zinc-400 leading-relaxed mb-6">
+                    Identified a critical systemic failure in data management where hundreds of disparate SharePoint lists were being misused as relational databases. This "Wild West" environment led to massive data duplication, a total lack of command-level visibility, and an estimated 80% operational overhead due to manual data reconciliation.
+                </p>
+                <div class="impact-box p-6 rounded-xl">
+                    <p class="text-blue-400 font-semibold">Key Issue: Data Silos & Integrity</p>
+                    <p class="text-zinc-500 text-sm mt-2">The lack of a centralized schema meant that leadership was making decisions based on fragmented and often contradictory project metrics.</p>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6 text-zinc-200">Architectural Solution</h2>
+                <div class="space-y-8">
+                    <div class="card p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold mb-4 text-blue-500">1. Strategic Advocacy & Procurement</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Successfully advocated at the PEO Digital (Washington Navy Yard) level to secure a dedicated environment. Presented the technical and business case for moving beyond SharePoint to a robust relational platform.
+                        </p>
+                    </div>
+                    <div class="card p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold mb-4 text-blue-500">2. Dataverse Normalization</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Architected a fully normalized relational data model in Microsoft Dataverse. This involved migrating legacy data from SharePoint into a structured schema with enforced referential integrity and authoritative data relationships.
+                        </p>
+                    </div>
+                    <div class="card p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold mb-4 text-blue-500">3. Model-Driven UI & Automation</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Designed and deployed a Model-Driven Power App as the primary interface. Integrated custom JSON formatting and GitHub-sourced Gantt chart components to provide real-time project visualization for Division and Branch heads.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold mb-6 text-zinc-200">The Impact</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="card p-6 rounded-xl border-l-4 border-green-500">
+                        <div class="text-3xl font-bold text-white mb-2">80%</div>
+                        <p class="text-zinc-500 text-sm">Reduction in departmental data management overhead.</p>
+                    </div>
+                    <div class="card p-6 rounded-xl border-l-4 border-blue-500">
+                        <div class="text-3xl font-bold text-white mb-2">100%</div>
+                        <p class="text-zinc-500 text-sm">Visibility for command leadership into project metrics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery">
+                <h2 class="text-2xl font-bold mb-8 text-zinc-200">Technical Evidence</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card aspect-video rounded-2xl flex flex-col items-center justify-center p-6 text-center border-dashed border-zinc-700">
+                        <i class="fas fa-project-diagram text-4xl text-zinc-700 mb-4"></i>
+                        <p class="text-zinc-500 text-sm">Upload Data Model Diagram to<br><code class="text-blue-500">/images/nswc-dataverse/</code></p>
+                    </div>
+                    <div class="card aspect-video rounded-2xl flex flex-col items-center justify-center p-6 text-center border-dashed border-zinc-700">
+                        <i class="fas fa-window-maximize text-4xl text-zinc-700 mb-4"></i>
+                        <p class="text-zinc-500 text-sm">Upload Power App Screenshot to<br><code class="text-blue-500">/images/nswc-dataverse/</code></p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <p>This project established a single source of truth for mission-critical project data and provided leadership with real-time, accurate visualization of command-level metrics.</p>
-    </section>
+    </main>
 
-    <section id="gallery">
-        <h2>Image Gallery</h2>
-        <p><em>(Upload your project screenshots and diagrams to the /images/nswc-dataverse/ folder to see them here.)</em></p>
-        <div class="gallery">
-            <div class="gallery-item">Placeholder: Data Model Diagram</div>
-            <div class="gallery-item">Placeholder: Power App UI Screenshot</div>
-        </div>
-    </section>
-
-    <footer style="text-align: center; padding: 20px; color: #7f8c8d;">
+    <footer class="py-12 px-6 border-t border-white/5 text-center text-zinc-600 text-sm">
         <p>&copy; 2026 Joseph Villasenor. All rights reserved.</p>
     </footer>
 </body>
