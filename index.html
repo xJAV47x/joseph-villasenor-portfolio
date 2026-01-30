@@ -8,103 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        
-        :root {
-            --bg-dark: #0a0a0a;
-            --card-bg: #161616;
-            --accent-blue: #2563eb;
-            --text-main: #ffffff;
-            --text-muted: #a1a1aa;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .nav-link {
-            color: var(--text-muted);
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--text-main);
-        }
-
-        .hero-gradient {
-            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid #27272a;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-4px);
-        }
-
-        .btn-primary {
-            background-color: var(--accent-blue);
-            transition: opacity 0.3s;
-        }
-
-        .btn-primary:hover {
-            opacity: 0.9;
-        }
-
-        .tech-tag {
-            background: rgba(37, 99, 235, 0.1);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            color: #60a5fa;
-        }
-
-        /* Carousel Styles */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-        }
+        :root { --bg-dark: #0a0a0a; --card-bg: #161616; --accent-blue: #2563eb; --text-main: #ffffff; --text-muted: #a1a1aa; }
+        body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%); }
+        .card { background-color: var(--card-bg); border: 1px solid #27272a; transition: all 0.3s ease; }
+        .card:hover { border-color: var(--accent-blue); transform: translateY(-4px); }
+        .btn-primary { background-color: var(--accent-blue); transition: opacity 0.3s; }
+        .tech-tag { background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); color: #60a5fa; }
+        .carousel-container { position: relative; overflow: hidden; }
+        .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-item { min-width: 100%; }
     </style>
 </head>
 <body class="antialiased">
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold tracking-tighter">JV</div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-zinc-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#work" class="hover:text-white transition">Work</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
             </div>
             <a href="mailto:delarosajoseph99@icloud.com" class="btn-primary px-5 py-2 rounded-lg text-sm font-semibold">Get in Touch</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-20 hero-gradient">
         <div class="text-center px-6 max-w-4xl">
             <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4">Joseph Villasenor</h1>
             <h2 class="text-2xl md:text-3xl font-semibold text-blue-500 mb-6">Cloud Solutions Architect</h2>
-            <p class="text-lg text-zinc-400 mb-10 leading-relaxed">
-                Enterprise Cloud Infrastructure | Microsoft 365 | Aerospace Technology
-            </p>
-            <p class="text-zinc-500 max-w-2xl mx-auto mb-12">
-                Global M365 Administrator and Solutions Architect with expertise in enterprise cloud transformation, aerospace systems integration, and mission-critical infrastructure. Proven track record delivering zero-downtime migrations, scalable cloud architectures, and cross-functional engineering solutions.
-            </p>
+            <p class="text-lg text-zinc-400 mb-10 leading-relaxed">Enterprise Cloud Infrastructure | Microsoft 365 | Aerospace Technology</p>
+            <p class="text-zinc-500 max-w-2xl mx-auto mb-12">Global M365 Administrator and Solutions Architect with expertise in enterprise cloud transformation, aerospace systems integration, and mission-critical infrastructure. Proven track record delivering zero-downtime migrations, scalable cloud architectures, and cross-functional engineering solutions.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#work" class="btn-primary px-8 py-3 rounded-xl font-bold">View My Work</a>
                 <a href="mailto:delarosajoseph99@icloud.com" class="border border-zinc-700 px-8 py-3 rounded-xl font-bold hover:bg-zinc-800 transition">Contact Me</a>
@@ -114,19 +49,13 @@
                 <span><i class="fas fa-phone mr-2"></i>+1 (619) 751-7036</span>
                 <span><i class="fab fa-linkedin mr-2"></i>LinkedIn</span>
             </div>
-            <div class="mt-6 text-zinc-600 text-sm">
-                San Diego · Corona · Long Beach · Los Angeles
-            </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 px-6 bg-zinc-950">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-12">About</h2>
-            <p class="text-zinc-400 text-lg leading-relaxed mb-16 max-w-3xl mx-auto">
-                With 9+ years of enterprise IT experience, I specialize in architecting scalable cloud solutions and leading digital transformations for mission-critical environments. At JetZero Aerospace, I served as Global M365 Administrator and Solutions Architect, managing 500+ users across engineering and operations, designing the Mission Operations Center, and orchestrating a zero-downtime cloud migration. My approach combines technical excellence with strategic business alignment, ensuring infrastructure decisions drive measurable organizational value.
-            </p>
+            <p class="text-zinc-400 text-lg leading-relaxed mb-16 max-w-3xl mx-auto">With 9+ years of enterprise IT experience, I specialize in architecting scalable cloud solutions and leading digital transformations for mission-critical environments. My approach combines technical excellence with strategic business alignment, ensuring infrastructure decisions drive measurable organizational value.</p>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card p-8 rounded-2xl text-left">
                     <h3 class="text-xl font-bold mb-4">Enterprise Scale</h3>
@@ -144,15 +73,12 @@
         </div>
     </section>
 
-    <!-- Featured Work (Carousel) -->
     <section id="work" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-4">Featured Work</h2>
-            <p class="text-zinc-500 text-center mb-16">Enterprise-scale projects delivering measurable impact across cloud infrastructure, aerospace systems, and organizational transformation.</p>
-            
+            <p class="text-zinc-500 text-center mb-16">Enterprise-scale projects delivering measurable impact across cloud infrastructure and aerospace systems.</p>
             <div class="carousel-container card rounded-3xl p-8 md:p-12">
                 <div class="carousel-track" id="carouselTrack">
-                    <!-- Project 1: NSWC Corona -->
                     <div class="carousel-item grid md:grid-cols-2 gap-12 items-center">
                         <div class="rounded-2xl overflow-hidden bg-zinc-900 aspect-video flex items-center justify-center border border-white/5">
                             <i class="fas fa-database text-6xl text-blue-500/20"></i>
@@ -160,26 +86,10 @@
                         <div>
                             <span class="text-blue-500 font-bold text-sm uppercase tracking-widest">NSWC Corona · 1/2</span>
                             <h3 class="text-3xl font-bold mt-4 mb-6">Enterprise Data Platform</h3>
-                            <p class="text-zinc-400 mb-8">Architected a centralized Dataverse solution to replace disparate SharePoint lists, reducing departmental overhead by 80% and establishing a single source of truth for command-level metrics.</p>
-                            <div class="grid grid-cols-2 gap-4 mb-8">
-                                <div class="bg-zinc-900/50 p-4 rounded-xl border border-white/5">
-                                    <div class="text-blue-500 font-bold">80%</div>
-                                    <div class="text-xs text-zinc-500">Overhead Reduction</div>
-                                </div>
-                                <div class="bg-zinc-900/50 p-4 rounded-xl border border-white/5">
-                                    <div class="text-blue-500 font-bold">100%</div>
-                                    <div class="text-xs text-zinc-500">Data Integrity</div>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-8">
-                                <span class="tech-tag px-3 py-1 rounded-full text-xs">Dataverse</span>
-                                <span class="tech-tag px-3 py-1 rounded-full text-xs">Power Apps</span>
-                                <span class="tech-tag px-3 py-1 rounded-full text-xs">Governance</span>
-                            </div>
+                            <p class="text-zinc-400 mb-8">Architected a centralized Dataverse solution to replace disparate SharePoint lists, reducing departmental overhead by 80%.</p>
                             <a href="projects/nswc-data-platform.html" class="btn-primary px-6 py-2 rounded-lg text-sm font-bold inline-block">View Case Study</a>
                         </div>
                     </div>
-                    <!-- Project 2: Mission Operations Center -->
                     <div class="carousel-item grid md:grid-cols-2 gap-12 items-center">
                         <div class="rounded-2xl overflow-hidden bg-zinc-900 aspect-video flex items-center justify-center border border-white/5">
                             <i class="fas fa-rocket text-6xl text-blue-500/20"></i>
@@ -187,27 +97,11 @@
                         <div>
                             <span class="text-blue-500 font-bold text-sm uppercase tracking-widest">JetZero Aerospace · 2/2</span>
                             <h3 class="text-3xl font-bold mt-4 mb-6">Mission Operations Center</h3>
-                            <p class="text-zinc-400 mb-8">Enterprise-scale aerospace flight testing center with integrated simulators, multi-display command center, and real-time data processing infrastructure supporting 50+ concurrent workstations.</p>
-                            <div class="grid grid-cols-2 gap-4 mb-8">
-                                <div class="bg-zinc-900/50 p-4 rounded-xl border border-white/5">
-                                    <div class="text-blue-500 font-bold">50+</div>
-                                    <div class="text-xs text-zinc-500">Workstations</div>
-                                </div>
-                                <div class="bg-zinc-900/50 p-4 rounded-xl border border-white/5">
-                                    <div class="text-blue-500 font-bold">20+</div>
-                                    <div class="text-xs text-zinc-500">Displays</div>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-8">
-                                <span class="tech-tag px-3 py-1 rounded-full text-xs">Enterprise Architecture</span>
-                                <span class="tech-tag px-3 py-1 rounded-full text-xs">Aerospace Systems</span>
-                                <span class="tech-tag px-3 py-1 rounded-full text-xs">Real-time Data</span>
-                            </div>
-                            <a href="#" class="btn-primary px-6 py-2 rounded-lg text-sm font-bold inline-block opacity-50 cursor-not-allowed">Coming Soon</a>
+                            <p class="text-zinc-400 mb-8">Designed and delivered a mobile command vehicle integrating networking, RF comms, and custom hardware solutions.</p>
+                            <a href="projects/jetzero-moc.html" class="btn-primary px-6 py-2 rounded-lg text-sm font-bold inline-block">View Case Study</a>
                         </div>
                     </div>
                 </div>
-                <!-- Carousel Controls -->
                 <div class="flex justify-center mt-8 space-x-4">
                     <button onclick="moveCarousel(-1)" class="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition"><i class="fas fa-chevron-left"></i></button>
                     <button onclick="moveCarousel(1)" class="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-zinc-800 transition"><i class="fas fa-chevron-right"></i></button>
@@ -216,7 +110,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="py-24 px-6 bg-zinc-950">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16">Professional Experience</h2>
@@ -234,13 +127,10 @@
                     </div>
                     <ul class="space-y-3 text-zinc-400 text-sm">
                         <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Global M365 Administrator managing 500+ users with 99.9% uptime SLA</li>
-                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>C-Suite technology advisor aligning cloud strategy with business objectives</li>
-                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Enterprise Solutions Architect designing scalable cloud infrastructure</li>
-                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Mission Operations Center lead architect for aerospace flight testing</li>
-                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Zero-downtime cloud migration orchestration (0% incident rate)</li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Architected secure data enclave for CUI/ITAR data in GCC High</li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Orchestrated zero-downtime migration of 23 TB of data</li>
                     </ul>
                 </div>
-
                 <div class="card p-8 rounded-2xl">
                     <div class="flex items-start justify-between mb-6">
                         <div>
@@ -255,105 +145,53 @@
                     <ul class="space-y-3 text-zinc-400 text-sm">
                         <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Architected centralized Dataverse solution reducing overhead by 80%</li>
                         <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Consolidated 40+ siloed SharePoint sites into structured Hub architecture</li>
-                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mt-1 mr-3 text-xs"></i>Implemented granular RBAC and PIM for secure command-level administration</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Expertise -->
     <section id="skills" class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4">Technical Expertise</h2>
-            <p class="text-zinc-500 text-center mb-16">Core competencies driving enterprise cloud transformation and architectural excellence.</p>
-            
+            <h2 class="text-4xl font-bold text-center mb-16">Technical Expertise</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h3 class="text-lg font-bold mb-6 text-zinc-300">Cloud & Infrastructure</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="tech-tag px-4 py-2 rounded-lg text-sm">Microsoft 365</span>
                         <span class="tech-tag px-4 py-2 rounded-lg text-sm">Azure</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">M365 Admin</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Cloud Architecture</span>
                         <span class="tech-tag px-4 py-2 rounded-lg text-sm">Zero Trust Security</span>
                     </div>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-6 text-zinc-300">Enterprise Solutions</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Solutions Architecture</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">System Design</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Enterprise Integration</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Scalability Planning</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-6 text-zinc-300">Development & Automation</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Power Automate</span>
+                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Dataverse</span>
                         <span class="tech-tag px-4 py-2 rounded-lg text-sm">Power Apps</span>
                         <span class="tech-tag px-4 py-2 rounded-lg text-sm">SharePoint</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Teams</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Loop</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-6 text-zinc-300">Technical Leadership</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Project Management</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Stakeholder Management</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Change Management</span>
-                        <span class="tech-tag px-4 py-2 rounded-lg text-sm">Budget Oversight</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-24 px-6 border-t border-white/5">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
             <div>
                 <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
-                <p class="text-zinc-500 mb-8 max-w-md">Open to discussing enterprise cloud solutions, architectural challenges, and strategic technology initiatives.</p>
+                <p class="text-zinc-500 mb-8">Open to discussing enterprise cloud solutions and strategic technology initiatives.</p>
                 <a href="mailto:delarosajoseph99@icloud.com" class="btn-primary px-8 py-3 rounded-xl font-bold inline-block">Start a Conversation</a>
             </div>
             <div class="space-y-6">
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mr-4">
-                        <i class="fas fa-envelope text-blue-500"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs text-zinc-500 uppercase font-bold">Email</div>
-                        <div class="font-medium">delarosajoseph99@icloud.com</div>
-                    </div>
+                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mr-4"><i class="fas fa-envelope text-blue-500"></i></div>
+                    <div><div class="text-xs text-zinc-500 uppercase font-bold">Email</div><div class="font-medium">delarosajoseph99@icloud.com</div></div>
                 </div>
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mr-4">
-                        <i class="fas fa-phone text-blue-500"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs text-zinc-500 uppercase font-bold">Phone</div>
-                        <div class="font-medium">+1 (619) 751-7036</div>
-                    </div>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mr-4">
-                        <i class="fab fa-linkedin text-blue-500"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs text-zinc-500 uppercase font-bold">LinkedIn</div>
-                        <div class="font-medium">View Profile <i class="fas fa-external-link-alt ml-1 text-xs"></i></div>
-                    </div>
+                    <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mr-4"><i class="fas fa-phone text-blue-500"></i></div>
+                    <div><div class="text-xs text-zinc-500 uppercase font-bold">Phone</div><div class="font-medium">+1 (619) 751-7036</div></div>
                 </div>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-zinc-600 text-sm">
-            <div class="flex items-center space-x-4 mb-4 md:mb-0">
-                <span>Based in: San Diego · Corona · Long Beach · Los Angeles</span>
-            </div>
-            <div>&copy; 2026 Joseph Villasenor. All rights reserved.</div>
         </div>
     </footer>
 
@@ -361,7 +199,6 @@
         let currentSlide = 0;
         const track = document.getElementById('carouselTrack');
         const slides = document.querySelectorAll('.carousel-item');
-
         function moveCarousel(direction) {
             currentSlide = (currentSlide + direction + slides.length) % slides.length;
             track.style.transform = `translateX(-${currentSlide * 100}%)`;
